@@ -3,3 +3,5 @@ class Tooltip extends HTMLElement {
     console.log('It is working!');
   }
 }
+
+customElements.define('uc-tooltip', Tooltip);
