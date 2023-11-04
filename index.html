@@ -8,15 +8,18 @@
       div {
         border: 2px solid orange;
       }
+      .highlight {
+        background-color: #f7d28e;
+      }
     </style>
     <script src="tooltip.js"></script>
     <script src="confirm-link.js"></script>
   </head>
   <body>
     <p>
-      <uc-tooltip text="Web Components is a set of standards."
-        >Web components</uc-tooltip
-      >
+      <uc-tooltip text="Web Components is a set of standards.">
+        <span class="highlight">Web components</span>
+      </uc-tooltip>
       are awesome!
     </p>
     <uc-tooltip></uc-tooltip>
