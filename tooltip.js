@@ -25,11 +25,11 @@ class Tooltip extends HTMLElement {
     this._tooltipContainer.style.color = 'white';
     this._tooltipContainer.style.position = 'absolute';
     this._tooltipContainer.style.zIndex = '10';
-    this.appendChild(this._tooltipContainer);
+    this.shadowRoot.appendChild(this._tooltipContainer);
   }
 
   _hideTooltip() {
-    this.removeChild(this._tooltipContainer);
+    this.shadowRoot.removeChild(this._tooltipContainer);
   }
 }
 
