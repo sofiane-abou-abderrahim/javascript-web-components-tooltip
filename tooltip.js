@@ -14,7 +14,7 @@ class Tooltip extends HTMLElement {
     tooltipIcon.textContent = ' (?)';
     tooltipIcon.addEventListener('mouseenter', this._showTooltip.bind(this));
     tooltipIcon.addEventListener('mouseleave', this._hideTooltip.bind(this));
-    this.appendChild(tooltipIcon);
+    this.shadowRoot.appendChild(tooltipIcon);
     this.style.position = 'relative';
   }
 
