@@ -3,6 +3,7 @@ class Tooltip extends HTMLElement {
     super();
     this._tooltipContainer;
     this._tooltipText = 'Some dummy tooltip text.';
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
