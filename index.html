@@ -5,24 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Components</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
       /* :root {} */
 
       html {
         --color-primary: #a4e6fc;
-      }
-
-      div {
-        border: 2px solid orange;
-      }
-
-      uc-tooltip {
-        border: 1px solid blue;
-        padding: 0.15rem;
-      }
-
-      .highlight {
-        /* background-color: #f7d28e; */
-        /* border-bottom: 2px dotted blue; */
+        font-family: sans-serif;
       }
     </style>
     <script src="tooltip.js"></script>
@@ -39,7 +29,6 @@
       are awesome!
     </p>
     <uc-tooltip></uc-tooltip>
-    <div>This does not get the web component styles!</div>
     <a is="uc-confirm-link" href="https://google.com">Google</a>
   </body>
 </html>
