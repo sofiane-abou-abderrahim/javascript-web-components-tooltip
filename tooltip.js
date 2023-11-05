@@ -56,7 +56,6 @@ class Tooltip extends HTMLElement {
     const tooltipIcon = this.shadowRoot.querySelector('span');
     tooltipIcon.addEventListener('mouseenter', this._showTooltip.bind(this));
     tooltipIcon.addEventListener('mouseleave', this._hideTooltip.bind(this));
-    this.shadowRoot.appendChild(tooltipIcon);
     this.style.position = 'relative';
   }
 
@@ -71,6 +70,10 @@ class Tooltip extends HTMLElement {
 
   static get observedAttributes() {
     return ['text'];
+  }
+
+  disconnectedCallback() {
+    console.log('Disconnected!');
   }
 
   _showTooltip() {
